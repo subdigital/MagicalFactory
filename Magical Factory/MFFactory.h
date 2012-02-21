@@ -14,6 +14,13 @@ typedef void (^MFFactoryBlock)(MFFactory *);
 
 @interface MFFactory : NSObject
 
+
+/* The name of the factory, which is used to uniquely distinguish it from other factories. */
+@property (nonatomic, copy) NSString *factoryName;
+
+/* The class of the subject */
+@property (nonatomic, copy) Class factoryClass;
+
 /*
  Defines a factory for a given class.  The factory name is implicitly defined as the name of the class.
  
@@ -22,7 +29,7 @@ typedef void (^MFFactoryBlock)(MFFactory *);
     block -     The block that will define the created object
  
  */
-+ (void)defineFactoryForClass:(Class)class_ withBlock:(MFFactoryBlock)block;
++ (void)defineFactoryForClass:(Class)class withBlock:(MFFactoryBlock)block;
 
 /*
  Defines a factory for a given class.  The factory name is implicitly defined as the name of the class.
@@ -33,13 +40,13 @@ typedef void (^MFFactoryBlock)(MFFactory *);
  block -     The block that will define the created object
  
  */
-+ (void)defineFactoryForClass:(Class)class_ named:(NSString *)name withBlock:(MFFactoryBlock)block;
++ (void)defineFactoryForClass:(Class)class named:(NSString *)name withBlock:(MFFactoryBlock)block;
 
 /*
  Returns a built object using the factory for the given class.
  (Note: throws an exception if this factory is not defined)
 */
-+ (id)objectOfClass:(Class)class_;
++ (id)objectOfClass:(Class)class;
 
 /*
  Returns a built object using the named factory.
