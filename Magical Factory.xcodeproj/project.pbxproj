@@ -7,14 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7495C3334B2D4115B0FF0980 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C9E6FB75C4CF469B83093D0F /* libPods.a */; };
 		B5E02A0C14F3EB9100F32742 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5E02A0B14F3EB9100F32742 /* Foundation.framework */; };
-		B5E02A1214F3EB9100F32742 /* Magical_Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E02A1114F3EB9100F32742 /* Magical_Factory.m */; };
+		B5E02A1214F3EB9100F32742 /* MFFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E02A1114F3EB9100F32742 /* MFFactory.m */; };
 		B5E02A1A14F3EB9200F32742 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5E02A1914F3EB9200F32742 /* SenTestingKit.framework */; };
 		B5E02A1C14F3EB9200F32742 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5E02A1B14F3EB9200F32742 /* UIKit.framework */; };
 		B5E02A1D14F3EB9200F32742 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5E02A0B14F3EB9100F32742 /* Foundation.framework */; };
 		B5E02A2014F3EB9200F32742 /* libMagical Factory.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B5E02A0814F3EB9100F32742 /* libMagical Factory.a */; };
 		B5E02A2614F3EB9200F32742 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B5E02A2414F3EB9200F32742 /* InfoPlist.strings */; };
-		B5E02A2914F3EB9200F32742 /* Magical_FactoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E02A2814F3EB9200F32742 /* Magical_FactoryTests.m */; };
+		B5E02A2914F3EB9200F32742 /* MFFactorySpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E02A2814F3EB9200F32742 /* MFFactorySpecs.m */; };
+		B5E02A3414F3EBB800F32742 /* Customer.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E02A3314F3EBB800F32742 /* Customer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,18 +30,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		91DF193D4E4D472FBA7E8F3E /* Pods.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		B5E02A0814F3EB9100F32742 /* libMagical Factory.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libMagical Factory.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5E02A0B14F3EB9100F32742 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		B5E02A0F14F3EB9100F32742 /* Magical Factory-Prefix.pch */ = {isa = PBXFileReference; path = "Magical Factory-Prefix.pch"; sourceTree = "<group>"; };
-		B5E02A1014F3EB9100F32742 /* Magical_Factory.h */ = {isa = PBXFileReference; path = Magical_Factory.h; sourceTree = "<group>"; };
-		B5E02A1114F3EB9100F32742 /* Magical_Factory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Magical_Factory.m; sourceTree = "<group>"; };
+		B5E02A0F14F3EB9100F32742 /* Magical Factory-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Magical Factory-Prefix.pch"; sourceTree = "<group>"; };
+		B5E02A1014F3EB9100F32742 /* MFFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MFFactory.h; sourceTree = "<group>"; };
+		B5E02A1114F3EB9100F32742 /* MFFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MFFactory.m; sourceTree = "<group>"; };
 		B5E02A1814F3EB9200F32742 /* Magical FactoryTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Magical FactoryTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5E02A1914F3EB9200F32742 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		B5E02A1B14F3EB9200F32742 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		B5E02A2314F3EB9200F32742 /* Magical FactoryTests-Info.plist */ = {isa = PBXFileReference; path = "Magical FactoryTests-Info.plist"; sourceTree = "<group>"; };
+		B5E02A2314F3EB9200F32742 /* Magical FactoryTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Magical FactoryTests-Info.plist"; sourceTree = "<group>"; };
 		B5E02A2514F3EB9200F32742 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		B5E02A2714F3EB9200F32742 /* Magical_FactoryTests.h */ = {isa = PBXFileReference; path = Magical_FactoryTests.h; sourceTree = "<group>"; };
-		B5E02A2814F3EB9200F32742 /* Magical_FactoryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Magical_FactoryTests.m; sourceTree = "<group>"; };
+		B5E02A2814F3EB9200F32742 /* MFFactorySpecs.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MFFactorySpecs.m; sourceTree = "<group>"; };
+		B5E02A3214F3EBB800F32742 /* Customer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Customer.h; sourceTree = "<group>"; };
+		B5E02A3314F3EBB800F32742 /* Customer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Customer.m; sourceTree = "<group>"; };
+		C9E6FB75C4CF469B83093D0F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +64,7 @@
 				B5E02A1C14F3EB9200F32742 /* UIKit.framework in Frameworks */,
 				B5E02A1D14F3EB9200F32742 /* Foundation.framework in Frameworks */,
 				B5E02A2014F3EB9200F32742 /* libMagical Factory.a in Frameworks */,
+				7495C3334B2D4115B0FF0980 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,9 +75,10 @@
 			isa = PBXGroup;
 			children = (
 				B5E02A0D14F3EB9100F32742 /* Magical Factory */,
-				B5E02A2114F3EB9200F32742 /* Magical FactoryTests */,
+				B5E02A2114F3EB9200F32742 /* Specs */,
 				B5E02A0A14F3EB9100F32742 /* Frameworks */,
 				B5E02A0914F3EB9100F32742 /* Products */,
+				91DF193D4E4D472FBA7E8F3E /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -90,6 +97,7 @@
 				B5E02A0B14F3EB9100F32742 /* Foundation.framework */,
 				B5E02A1914F3EB9200F32742 /* SenTestingKit.framework */,
 				B5E02A1B14F3EB9200F32742 /* UIKit.framework */,
+				C9E6FB75C4CF469B83093D0F /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -97,8 +105,8 @@
 		B5E02A0D14F3EB9100F32742 /* Magical Factory */ = {
 			isa = PBXGroup;
 			children = (
-				B5E02A1014F3EB9100F32742 /* Magical_Factory.h */,
-				B5E02A1114F3EB9100F32742 /* Magical_Factory.m */,
+				B5E02A1014F3EB9100F32742 /* MFFactory.h */,
+				B5E02A1114F3EB9100F32742 /* MFFactory.m */,
 				B5E02A0E14F3EB9100F32742 /* Supporting Files */,
 			);
 			path = "Magical Factory";
@@ -112,13 +120,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		B5E02A2114F3EB9200F32742 /* Magical FactoryTests */ = {
+		B5E02A2114F3EB9200F32742 /* Specs */ = {
 			isa = PBXGroup;
 			children = (
-				B5E02A2714F3EB9200F32742 /* Magical_FactoryTests.h */,
-				B5E02A2814F3EB9200F32742 /* Magical_FactoryTests.m */,
 				B5E02A2214F3EB9200F32742 /* Supporting Files */,
+				B5E02A3214F3EBB800F32742 /* Customer.h */,
+				B5E02A3314F3EBB800F32742 /* Customer.m */,
+				B5E02A2814F3EB9200F32742 /* MFFactorySpecs.m */,
 			);
+			name = Specs;
 			path = "Magical FactoryTests";
 			sourceTree = "<group>";
 		};
@@ -151,6 +161,7 @@
 				B5E02A0414F3EB9100F32742 /* Sources */,
 				B5E02A0514F3EB9100F32742 /* Frameworks */,
 				B5E02A0614F3EB9100F32742 /* Headers */,
+				E886B58334A7400A9BECBC6A /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -169,6 +180,7 @@
 				B5E02A1414F3EB9200F32742 /* Frameworks */,
 				B5E02A1514F3EB9200F32742 /* Resources */,
 				B5E02A1614F3EB9200F32742 /* ShellScript */,
+				E886B58334A7400A9BECBC6A /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -232,6 +244,20 @@
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
 		};
+		E886B58334A7400A9BECBC6A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -239,7 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5E02A1214F3EB9100F32742 /* Magical_Factory.m in Sources */,
+				B5E02A1214F3EB9100F32742 /* MFFactory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,7 +273,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5E02A2914F3EB9200F32742 /* Magical_FactoryTests.m in Sources */,
+				B5E02A2914F3EB9200F32742 /* MFFactorySpecs.m in Sources */,
+				B5E02A3414F3EBB800F32742 /* Customer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,10 +342,12 @@
 		};
 		B5E02A2D14F3EB9200F32742 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 91DF193D4E4D472FBA7E8F3E /* Pods.xcconfig */;
 			buildSettings = {
 				DSTROOT = /tmp/Magical_Factory.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Magical Factory/Magical Factory-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -327,10 +356,12 @@
 		};
 		B5E02A2E14F3EB9200F32742 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 91DF193D4E4D472FBA7E8F3E /* Pods.xcconfig */;
 			buildSettings = {
 				DSTROOT = /tmp/Magical_Factory.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Magical Factory/Magical Factory-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -339,30 +370,38 @@
 		};
 		B5E02A3014F3EB9200F32742 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 91DF193D4E4D472FBA7E8F3E /* Pods.xcconfig */;
 			buildSettings = {
+				DSTROOT = /tmp/xcodeproj.dst;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Magical Factory/Magical Factory-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "Magical FactoryTests/Magical FactoryTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
 		};
 		B5E02A3114F3EB9200F32742 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 91DF193D4E4D472FBA7E8F3E /* Pods.xcconfig */;
 			buildSettings = {
+				DSTROOT = /tmp/xcodeproj.dst;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Magical Factory/Magical Factory-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "Magical FactoryTests/Magical FactoryTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
@@ -386,6 +425,7 @@
 				B5E02A2E14F3EB9200F32742 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B5E02A2F14F3EB9200F32742 /* Build configuration list for PBXNativeTarget "Magical FactoryTests" */ = {
 			isa = XCConfigurationList;
@@ -394,6 +434,7 @@
 				B5E02A3114F3EB9200F32742 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
