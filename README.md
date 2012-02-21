@@ -34,7 +34,7 @@ Once you have the code you have a few options:
            return @"Test Customer %d";
        }];
 
-        [customer setStatus = @"active"];
+        [customer setStatus:@"active"];
 
         [customer sequenceFor:@"email" do:^(int i) {
             return @"customer-%d@example.com"
