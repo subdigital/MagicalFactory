@@ -72,7 +72,7 @@ Also, you cannot utilize properties, since they are not defined on `id`.
 
 Contributions are welcome.  Just fork the project, make your changes, submit a pull request.
 
-Tests are appreciated :smiley:.
+Tests are appreciated :smile:.
 
 # License (MIT)
 
