@@ -22,7 +22,7 @@ Once you have the code you have a few options:
 - Drag the classes into your project.  Make sure to link it only to your test target.
 - Drag the project into your workspace.  Add libMagical-Factory.a as a dependency to your test target.
 
-# Usage
+# Usage (proposed)
 
 ```objc
 
@@ -34,7 +34,7 @@ Once you have the code you have a few options:
            return @"Test Customer %d";
        }];
 
-        customer.status = @"active";
+        [customer setStatus = @"active"];
 
         [customer sequenceFor:@"email" do:^(int i) {
             return @"customer-%d@example.com"
@@ -55,7 +55,20 @@ Once you have the code you have a few options:
 
 ```
 
-# Contributing
+## Known Limitations
+
+The factory uses method forwarding to set properties on the subject.  Because of this, you'll get warnings
+if your block defines the parameter as `MFFactory *`.  Instead, you can use `id` to supress the warnings.
+
+Also, you cannot utilize properties, since they are not defined on `id`.
+
+## Todo
+
+- <strike>Setting simple properties</strike>
+- Sequences
+- Associations
+
+## Contributing
 
 Contributions are welcome.  Just fork the project, make your changes, submit a pull request.
 
