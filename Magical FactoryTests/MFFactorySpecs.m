@@ -82,7 +82,28 @@ describe(@"MFFactory", ^{
             Customer *customer = [MFFactory objectOfClass:[Customer class]];
             [[[customer name] should] equal:@"customer-42"];
         });
-
+    });
+    
+    context(@"Named factories", ^{
+        beforeEach(^{
+            [MFFactory reset];
+            [MFFactory defineFactoryForClass:[Customer class] withBlock:^(id customer) { 
+            }];
+            [MFFactory defineFactoryForClass:[Customer class] named:@"delinquent_customer" withBlock:^(id customer) {
+                [customer setName:@"Joe Bad Debt"];
+                [customer setStatus:CustomerStatusDelinquent];
+            }];
+        });
+        
+        it(@"should give me a customer with a status of delinquent", ^{
+            Customer *customer = [MFFactory objectWithFactoryName:@"delinquent_customer"];
+            [[theValue([customer status]) should] equal:theValue(CustomerStatusDelinquent)];
+        });
+        
+        it(@"should still allow getting the default factory for customer", ^{
+            Customer *customer = [MFFactory objectOfClass:[Customer class]];
+            [[theValue([customer status]) shouldNot] equal:theValue(CustomerStatusDelinquent)];
+        });
     });
 });
 

@@ -12,6 +12,7 @@
 
 @synthesize name = _name;
 @synthesize email = _email;
+@synthesize status = _status;
 
 - (void)dealloc {
     [_name release];
