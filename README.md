@@ -65,7 +65,7 @@ Also, you cannot utilize properties, since they are not defined on `id`.
 ## Todo
 
 - [done] Setting simple properties</strike>
-- Sequences
+- [done] Sequences
 - Associations
 
 ## Contributing

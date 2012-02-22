@@ -11,6 +11,7 @@
 @class MFFactory;
 
 typedef void (^MFFactoryBlock)(MFFactory *);
+typedef NSString * (^SequenceBlock)(int i);
 
 @interface MFFactory : NSObject
 
@@ -54,10 +55,24 @@ typedef void (^MFFactoryBlock)(MFFactory *);
  */
 + (id)objectWithFactoryName:(NSString *)name;
 
-/* Removes all registered factories. */
-+ (void)removeAllFactories;
+/* Removes all registered factories & sequences. */
++ (void)reset;
 
 /* Returns the registered factories in a dictionary */
 + (NSMutableDictionary *)factories;
+
+/*
+ Defines a numerical sequence for the given property name.
+ Arguments:
+ propertyName -     The name of the property that the sequence will apply to.  Must be key-value-coding compliant for this property.
+ sequenceBlock -    The block that you use to set the value of the property.  The sequence number is passed in as an argument.  You
+                    must return a format string with %d in it, where the sequence number will be substituded.
+ 
+ Example:
+    [factory sequenceFor:@"foo" do:^(int i) {
+        return @"foo-%d";
+    }]
+ */
+- (void)sequenceFor:(NSString *)propertyName do:(SequenceBlock)sequenceBlock;
 
 @end

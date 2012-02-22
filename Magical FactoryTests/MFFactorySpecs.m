@@ -22,14 +22,14 @@ describe(@"MFFactory", ^{
     it(@"Removing factories should clear the defined factories", ^{
         [MFFactory defineFactoryForClass:[Customer class] withBlock:^(MFFactory *customer) {           
         }];
-        [MFFactory removeAllFactories];
+        [MFFactory reset];
         int count = [[MFFactory factories] count];
         [[theValue(count) should] equal:theValue(0)];
     });
     
     context(@"A simple factory for the Customer class", ^{
         beforeEach(^{
-            [MFFactory removeAllFactories];
+            [MFFactory reset];
             [MFFactory defineFactoryForClass:[Customer class] withBlock:^(id customer) {
                 // Kind of awkward that you can't use properties here.  The type of 'customer' is really an MFFactory instance...
                 // if it is typed as such in the block signature, you get warnings because setName: doesn't exist on MFFactory.
@@ -51,7 +51,39 @@ describe(@"MFFactory", ^{
             Customer *customer = [MFFactory objectOfClass:[Customer class]];
             [[customer.name should] equal:@"Test Customer"];
         });
-    });        
+    });
+    
+    context(@"A factory with sequences", ^{
+        beforeEach(^{
+            [MFFactory reset];
+            [MFFactory defineFactoryForClass:[Customer class] withBlock:^(id customer) {
+                [customer sequenceFor:@"name" do:^(int i) {
+                    return @"customer-%d";
+                }];
+            }];
+        });
+        
+        it(@"should generate customer-1 for the first customer name", ^{
+            Customer *customer = [MFFactory objectOfClass:[Customer class]];
+            [[[customer name] should] equal:@"customer-1"];
+        });
+        
+        it(@"should generate customer-2 for the second customer name", ^{
+            Customer *customer = [MFFactory objectOfClass:[Customer class]];
+            customer = [MFFactory objectOfClass:[Customer class]];
+            [[[customer name] should] equal:@"customer-2"];
+        });
+        
+        it(@"should generate customer-42 for the 42nd customer name", ^{
+            for (int i = 0; i<41; i++) {
+                [MFFactory objectOfClass:[Customer class]];
+            }
+            
+            Customer *customer = [MFFactory objectOfClass:[Customer class]];
+            [[[customer name] should] equal:@"customer-42"];
+        });
+
+    });
 });
 
 SPEC_END

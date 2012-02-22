@@ -9,6 +9,7 @@
 #import "MFFactory.h"
 
 static NSMutableDictionary *__factories;
+static NSMutableDictionary *__sequences;
 
 @interface MFFactory () 
 
@@ -38,6 +39,15 @@ static NSMutableDictionary *__factories;
     return __factories;
 }
 
++ (NSMutableDictionary *)sequences {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        __sequences = [[NSMutableDictionary alloc] init];
+    });
+    
+    return __sequences;
+}
+
 + (void)defineFactoryForClass:(Class)class withBlock:(MFFactoryBlock)block {
     [self defineFactoryForClass:class named:[class description] withBlock:block];
 }
@@ -57,8 +67,9 @@ static NSMutableDictionary *__factories;
     return factory.subject;
 }
 
-+ (void)removeAllFactories {
++ (void)reset {
     [__factories removeAllObjects];
+    [__sequences removeAllObjects];
 }
 
 #pragma mark - Instance methods
@@ -94,6 +105,24 @@ static NSMutableDictionary *__factories;
     }
     
     return _subject;
+}
+
+- (void)sequenceFor:(NSString *)propertyName do:(SequenceBlock)sequenceBlock {
+    NSString *key = [NSString stringWithFormat:@"%@:%@", [self factoryName], propertyName];
+    int number;
+    if ([[MFFactory sequences] objectForKey:key]) {
+        NSNumber *num = [[MFFactory sequences] objectForKey:key];
+        number = [num intValue];
+    } else {
+        number = 1;
+    }
+    
+    NSString *formatString = sequenceBlock(number);
+    NSString *value = [NSString stringWithFormat:formatString, number];
+    [self.subject setValue:value forKey:propertyName];
+    
+    NSNumber *nextSequenceNumber = [NSNumber numberWithInt:number + 1];
+    [[MFFactory sequences] setObject:nextSequenceNumber forKey:key];
 }
 
 #pragma mark - Message Forwarding to Subject
