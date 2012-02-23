@@ -14,9 +14,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B5E02A1714F3EB9200F32742"
-               BuildableName = "Magical FactoryTests.octest"
-               BlueprintName = "Magical FactoryTests"
-               ReferencedContainer = "container:Magical Factory.xcodeproj">
+               BuildableName = "MagicalFactoryTests.octest"
+               BlueprintName = "MagicalFactoryTests"
+               ReferencedContainer = "container:MagicalFactory.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,9 +32,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B5E02A1714F3EB9200F32742"
-               BuildableName = "Magical FactoryTests.octest"
-               BlueprintName = "Magical FactoryTests"
-               ReferencedContainer = "container:Magical Factory.xcodeproj">
+               BuildableName = "MagicalFactoryTests.octest"
+               BlueprintName = "MagicalFactoryTests"
+               ReferencedContainer = "container:MagicalFactory.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
