@@ -1,0 +1,17 @@
+GIT
+  remote: http://github.com/lukeredpath/xcodebuild-rb.git
+  revision: d361106071341430dd82b22578662dace830c73b
+  branch: sentest-translations
+  specs:
+    xcodebuild-rb (0.2.0)
+      state_machine (~> 1.1.2)
+
+GEM
+  specs:
+    state_machine (1.1.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  xcodebuild-rb!
